@@ -16,16 +16,18 @@
         /* Add your custom CSS styles here */
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #9cd6e0;
+            background-color: #d4e6f1;
         }
         /*aqui se modifica el ancho del cuadro del formulario */
         .contact-form {
-            width: 80%;
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            align-content: center;
+            margin-top: 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 10px;
         }
 
         .contact-form h3 {
@@ -39,10 +41,11 @@
         }
        /*aqui se modifica el ancho del recuadro del formulario */
         .contact-form input[type="text"] {
-            width: 50%;
+            width: 60%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 3px;
+            
         
         }
 
@@ -56,11 +59,11 @@
         }
 
         .contact-info {
-            width: 80%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
+            background-color: #faf9f9;
+            padding: 6px;
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 18px;
         }
 
         .contact-info h4 {
@@ -85,24 +88,27 @@
         .contact-info p {
             margin-top: 20px;
         }
+        .logo {
+            margin-left: 30px;
+        }
     </style>
 </head>
 <body>
     
     <div class="content">
 
-        <h1 class="logo"> Proyecto Guay <span></span></h1>
-
+        <h1 class="logo"> Proyecto ONG <span></span></h1>
         <div class="contact-wrapper animated bounceInUp">
-            <div class="contact-info">
-            
-                <p>Somos una fundación que se dedica a brindar ayuda a familias, durante la internación por tratamiento médico de sus hijos e hijas.
-                    Recibimos donaciones de todo el país tanto en dinero como en especies (alimentos, ropa, juguetes).
-                    </p> 
-            </div>
         </div> 
-        <br> 
             <div class="contact-form">
+                <div class="contact-info">
+                    <br> 
+                    <h4>Sobre nosotros</h4>
+                        <p>Somos una fundación que se dedica a brindar ayuda a familias, durante la internación por tratamiento médico de sus hijos e hijas.
+                            Recibimos donaciones de todo el país tanto en dinero como en especies (alimentos, ropa, juguetes).
+                            </p> 
+                    </div>
+                    <br> 
                 <h3>Contactanos</h3>
                 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
@@ -115,38 +121,40 @@
                     <!--  <input type="hidden" name="debug" value=1>                              -->
                     <!--  <input type="hidden" name="debugEmail" value="flor3nets@gmail.com">     -->
                     <!--  ----------------------------------------------------------------------  -->
+                    <center> 
+                        <label for="first_name">Nombre</label><input  id="first_name" maxlength="40" name="first_name" size="10" type="text" /><br> 
+                        <label for="last_name">Apellido</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
                     
-                    <label for="first_name">Nombre</label><input  id="first_name" maxlength="40" name="first_name" size="10" type="text" /><br>
+                        <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+                        
+                        <label for="mobile">Telefono</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
+                        <br>
+                        Tipo de donación:<select  id="00N8b00000H1Dld" name="00N8b00000H1Dld" title="Tipo de donación"><option value="">--None--</option><option value="Alimentos">Alimentos</option>
+                        <option value="Dinero">Dinero</option>
+                        <option value="Juguetes">Juguetes</option>
+                        <option value="Ropa">Ropa</option>
+                        </select><br>
+                        <br>
+                        <input type="submit" name="submit">
+                    </center>
                     
-                    <label for="last_name">Apellido</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
                     
-                    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-                    
-                    <label for="mobile">Telefono</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
-                    <br>
-                    Tipo de donación:<select  id="00N8b00000H1Dld" name="00N8b00000H1Dld" title="Tipo de donación"><option value="">--None--</option><option value="Alimentos">Alimentos</option>
-                    <option value="Dinero">Dinero</option>
-                    <option value="Juguetes">Juguetes</option>
-                    <option value="Ropa">Ropa</option>
-                    </select><br>
-                    <br>
-                    <input type="submit" name="submit">
+                   
                     
                     </form>
                     
                     
             </div>
-            <br>
-            <div class="contact-info">
+            
+            <div class="contact-form">
                 
                 <h4>Mas Información</h4>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Baker Street</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Chaco, Argentina.</li>
                     <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
-                    <li><i class="fas fa-envelope-open-text"></i> contact@website.com</li>
+                    <li><i class="fas fa-envelope-open-text"></i> proyecto@wingu.com</li>
                 </ul>
-                <p>texto</p>
-                <p>Company.com</p>
+                <p>Wingu.com.ar</p>
             </div>
         </div>
 
