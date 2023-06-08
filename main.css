@@ -1,0 +1,101 @@
+.logo{
+    text-align: center;
+}
+       /* Codigo referente al estilo del cuerpo de la pagina*/
+        body {
+          font-family: 'Quicksand', sans-serif;
+          background-color: #d4e6f1;
+      }
+      /*Codigo referente al recuadro del formulario*/
+      .contact-form {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-top: 10px;
+          margin-left: 150px;
+          margin-right: 150px;
+          margin-bottom: 10px;
+      }
+      /*Codigo referente al titulo de contactanos*/
+      .contact-form h3 {
+          margin: 0 0 20px;
+          font-size: 24px;
+          text-align: center;
+      }
+      /*Codigo referente a los titulos del formulario*/
+      .contact-form label {
+          display: block;
+          margin-bottom: 20px;
+      }
+     /*Codigo referente al Picklist */
+      .contact-form select{
+          width: 33%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          font-size: 16px;
+          
+      
+      }
+      /*Codigo referente a las cajas de texto del formluario */
+      .contact-form input[type="text"] {
+          width: 30%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          
+      
+      }
+      /*Codigo referente al botón*/
+      .contact-form input[type="submit"] {
+          background-color: #4caf50;
+          color: #fff;
+          padding: 10px 20px;  /*alinear*/
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+      }
+     /*Codigo referente al botón*/
+      .contact-info {
+          background-color: #faf9f9;
+          padding: 6px;
+          border-radius: 8px;   
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-bottom: 18px;
+          justify-content: center;
+          margin-left: 150px;
+          margin-right: 150px;
+      }
+     /*Codigo referente texto de mas información*/
+      .contact-info h4 {
+          margin: 0 0 20px;
+          font-size: 27px;
+          display: flex;
+          justify-content: space-around;
+      }
+    /*Codigo referente al botón*/
+      .contact-info ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+/*Codigo referente a los margenes*/
+      .contact-info ul li {
+          margin-bottom: 10px;
+      }
+
+      .contact-info ul li i {
+          margin-right: 15px;
+      }
+
+      .contact-info p {
+          margin-top: 20px;
+      }
+      .logo {
+          margin-left: 30px;
+      }
+      .link{
+        text-decoration: none;
+        color: blue;
+      }

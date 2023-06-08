@@ -5,99 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-    <title>Form</title>
+    <title>Formulario</title>
     <!-- GOOGLE FONTs -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <style>
-        /* Add your custom CSS styles here */
-        body {
-            font-family: 'Quicksand', sans-serif;
-            background-color: #d4e6f1;
+    <link rel="stylesheet" href="main.css">
+    <a href="link"> </a>
+    <script>
+        function validateForm() {
+            var termsCheckbox = document.getElementById("terms");
+    
+            if (!termsCheckbox.checked) {
+                alert("Debe aceptar los términos y condiciones para continuar.");
+                return false;
+            }
+    
+            return true;
         }
-        /*aqui se modifica el ancho del cuadro del formulario */
-        .contact-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 10px;
-            margin-left: 30px;
-            margin-right: 30px;
-            margin-bottom: 10px;
-        }
-
-        .contact-form h3 {
-            margin: 0 0 20px;
-            font-size: 24px;
-        }
-
-        .contact-form label {
-            display: block;
-            margin-bottom: 20px;
-        }
-       /*aqui se modifica el ancho del recuadro del formulario */
-        .contact-form input[type="text"] {
-            width: 60%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            
-        
-        }
-
-        .contact-form input[type="submit"] {
-            background-color: #4caf50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        .contact-info {
-            background-color: #faf9f9;
-            padding: 6px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 18px;
-        }
-
-        .contact-info h4 {
-            margin: 0 0 20px;
-            font-size: 18px;
-        }
-
-        .contact-info ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .contact-info ul li {
-            margin-bottom: 10px;
-        }
-
-        .contact-info ul li i {
-            margin-right: 15px;
-        }
-
-        .contact-info p {
-            margin-top: 20px;
-        }
-        .logo {
-            margin-left: 30px;
-        }
-    </style>
+    </script>
 </head>
 <body>
     
-    <div class="content">
-
-        <h1 class="logo"> Proyecto ONG <span></span></h1>
+    <div class ="content" >
+        <div class = "titulo">
+        <h1 class ="logo">  Proyecto ONG <span></span></h1>
+    </div>
         <div class="contact-wrapper animated bounceInUp">
         </div> 
             <div class="contact-form">
@@ -109,11 +43,11 @@
                             </p> 
                     </div>
                     <br> 
-                <h3>Contactanos</h3>
+                <h3>Contactanos </h3>
                 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
                     <input type=hidden name="oid" value="00D8b0000031Mve">
-                    <input type=hidden name="retURL" value="http://"> <!-- aqui va el link de la pagina que mandaria en modo de agradecimiento -->
+                    <input type=hidden name="retURL" value="https://winguweb.org/"> <!-- aqui va el link de la pagina que mandaria en modo de agradecimiento -->
                     
                     <!--  ----------------------------------------------------------------------  -->
                     <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -124,41 +58,41 @@
                     <center> 
                         <label for="first_name">Nombre</label><input  id="first_name" maxlength="40" name="first_name" size="10" type="text" /><br> 
                         <label for="last_name">Apellido</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-                    
-                        <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-                        
+                        <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text"  required="" /><br>
                         <label for="mobile">Telefono</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
                         <br>
-                        Tipo de donación:<select  id="00N8b00000H1Dld" name="00N8b00000H1Dld" title="Tipo de donación"><option value="">--None--</option><option value="Alimentos">Alimentos</option>
+                        Tipo de donación: 
+                        <br> <select style="width: 32%;" class= "contact-form select" id="00N8b00000H1Dld" name="00N8b00000H1Dld" title="Tipo de donación"><option value="">--None--</option><option value="Alimentos">Alimentos</option>
                         <option value="Dinero">Dinero</option>
                         <option value="Juguetes">Juguetes</option>
                         <option value="Ropa">Ropa</option>
                         </select><br>
                         <br>
+                        <label for="terms">Acepto los Términos y Condiciones</label>
+                        <input type="checkbox" id="terms" name="terms" required><br>
                         <input type="submit" name="submit">
                     </center>
-                    
-                    
-                   
-                    
-                    </form>
-                    
-                    
+                    </form>          
+            </div>
             </div>
             
             <div class="contact-form">
-                
-                <h4>Mas Información</h4>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Chaco, Argentina.</li>
-                    <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
-                    <li><i class="fas fa-envelope-open-text"></i> proyecto@wingu.com</li>
-                </ul>
-                <p>Wingu.com.ar</p>
-            </div>
-        </div>
-
-    </div>
-
+                <center>
+                    <footer>
+                     <div>
+                    <h4>Más Información</h4>
+                    <ul>
+                        <i class="fas fa-map-marker-alt"></i> Chaco, Argentina.<br> 
+                        <i class="fas fa-phone"></i> (111) 111 111 111 <br> 
+                        <i class="fas fa-envelope-open-text"></i> proyecto@wingu.com <br>
+                    </ul>
+                </div>
+                <div class="copy">
+                            <h4> Copyright 2022&#169; Todos los derechos reservados Wingu</h4>
+                            <div class="link" href="https://winguweb.org/"> Fundación Wingu 
+                        </div>
+                        </center>
+                        </div>
+                    </footer>
 </body>
 </html>
